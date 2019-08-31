@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "map-route": "plugin://mapPlugin/mapRoute",
+    "van-tag": "/static/vant-weapp/tag/index",
+    "van-button": "/static/vant-weapp/button/index"
+  },
+  
+  "navigationBarBackgroundColor": "#F5D039",
+  "navigationBarFontSize": "12px",
+  "navigationBarTitleText": "车位预约",
+  "navigationBarTextStyle": "black"
+}

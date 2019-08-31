@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-tag": "/static/vant-weapp/tag/index",
+    "van-button": "/static/vant-weapp/button/index"
+  },
+  
+  "navigationBarBackgroundColor": "#F5D039",
+  "navigationBarFontSize": "12px",
+  "navigationBarTitleText": "预约成功",
+  "navigationBarTextStyle": "black"
+}

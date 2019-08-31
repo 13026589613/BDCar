@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/home/main",
+    "pages/twxx/main",
+    "pages/personal/main",
+    "pages/personal/money/main",
+    "pages/personal/record/main",
+    "pages/personal/record/details/main",
+    "pages/personal/myCar/main",
+    "pages/personal/myCar/addCar/main",
+    "pages/personal/carLocal/main",
+    "pages/personal/carLocal/carInfo/main",
+    "pages/personal/carLocal/carCensus/main",
+    "pages/personal/carLocal/carCard/main",
+    "pages/personal/carLocal/carShare/main",
+    "pages/personal/carLocal/addCarInfo/baseInfo/main",
+    "pages/personal/carLocal/addCarInfo/shareInfo/main",
+    "pages/personal/carLocal/addCarInfo/finish/main",
+    "pages/settings/main",
+    "pages/carPlaceLock/main",
+    "pages/parking/main",
+    "pages/parking/details/main",
+    "pages/parking/order/main",
+    "pages/parking/navgation/main",
+    "pages/login/main",
+    "pages/phone/main"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "navigationBarTitleText": "emm...",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "black"
+  },
+  "plugins": {
+    "mapPlugin": {
+      "version": "1.0.6",
+      "provider": "wx5bc2ac602a747594"
+    }
+  }
+}

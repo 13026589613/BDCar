@@ -1,0 +1,16 @@
+{
+  
+  "navigationBarBackgroundColor": "#F5D039",
+  "navigationBarFontSize": "12px",
+  "navigationBarTitleText": "车位信息",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "van-picker": "/static/vant-weapp/picker/index",
+    "van-popup": "/static/vant-weapp/popup/index",
+    "van-field": "/static/vant-weapp/field/index",
+    "van-cell": "/static/vant-weapp/cell/index",
+    "van-cell-group": "/static/vant-weapp/cell-group/index",
+    "van-tag": "/static/vant-weapp/tag/index",
+    "van-button": "/static/vant-weapp/button/index"
+  }
+}

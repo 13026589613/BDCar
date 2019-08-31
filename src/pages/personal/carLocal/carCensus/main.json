@@ -1,0 +1,14 @@
+{
+  
+  "navigationBarBackgroundColor": "#F5D039",
+  "navigationBarFontSize": "12px",
+  "navigationBarTitleText": "车位使用情况",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "van-tag": "/static/vant-weapp/tag/index",
+    "van-tab": "/static/vant-weapp/tab/index",
+    "van-tabs": "/static/vant-weapp/tabs/index",
+    "van-cell": "/static/vant-weapp/cell/index",
+    "van-cell-group": "/static/vant-weapp/cell-group/index"
+  }
+}

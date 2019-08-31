@@ -1,0 +1,13 @@
+{
+  
+  "navigationBarBackgroundColor": "#F5D039",
+  "navigationBarFontSize": "12px",
+  "navigationBarTitleText": "我的钱包",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "van-cell": "/static/vant-weapp/cell/index",
+    "van-cell-group": "/static/vant-weapp/cell-group/index",
+    "van-tag": "/static/vant-weapp/tag/index",
+    "van-button": "/static/vant-weapp/button/index"
+  }
+}

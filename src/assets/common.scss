@@ -1,0 +1,203 @@
+.pad-tb {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.pad-lft {
+  padding-left: 1em;
+}
+.mar-lr {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.mar-rgt-5 {
+  margin-right: .5em;
+}
+.mar-lft-2 {
+  margin-left: .2em;
+}
+.mar-lft-5 {
+  margin-left: .5em;
+}
+.mar-rgt {
+  margin-right: 1em;
+}
+.mar-lft {
+  margin-left: 1em;
+}
+.mar-top {
+  margin-top: 1em;
+}
+.mar-top-5 {
+  margin-top: .5em;
+}
+.mar-btm {
+  margin-bottom: 1em;
+}
+.mar-btm-5 {
+  margin-bottom: .5em;
+}
+.mar-all {
+  margin: 1em;
+}
+
+.font-smaller {
+  font-size: .8em;
+}
+
+/**
+* 公用布局样式
+*/
+.full-con {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.full-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  position: relative;
+  height:100%;
+}
+
+.P-class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: 900;
+  // background-color: #F5D039;
+  width: 20px;
+  height: 20px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.display-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-1 {
+  flex: 1;
+}
+.wh-1rem {
+  width: .2rem;
+  height: .2rem;
+}
+
+.flex {
+  flex: 1;
+  display: flex;
+}
+
+.column-flex {
+  flex-direction: column;
+}
+
+/**
+* 文字样式
+*/
+.font-3 {
+  font-size: 3em;
+}
+.font-2 {
+  font-size: 2em;
+}
+.font-bg {
+  font-size: 1.5em;
+}
+.font-lg {
+  font-size: 1.2em;
+}
+.font-b {
+  font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/**
+* 颜色样式
+*/
+.bg-gray {
+  background-color: #F5F5F5;
+}
+.bg-white {
+  background-color: #FFF !important;
+}
+.c-coffee {
+  color: #68401D;
+}
+.c-gray {
+  color: #999999;
+}
+.c-org {
+  color: #F5D039;
+}
+.c-red {
+  color: #A43A01;
+}
+
+.c-gray-white {
+  color: #8A96A3;
+}
+.c-black {
+  color: #333;
+}
+.f-blod {
+  font-weight: 500;
+}
+/**
+* van 修改样式
+*/
+.van-search {
+  background: #FFF !important;
+  padding: 0.5em 0.8em;
+}
+
+.van-tab {
+  background-color: #F5F5F5 !important;
+}
+
+.bg-white .van-tab {
+  background-color: #FFF !important;
+}
+
+.panel .van-cell {
+  background: transparent !important;
+}
+
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+.clear {
+  clear: both;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.car-no-btn-class {
+  width: 2.5em;
+  height: 3em;
+  margin: 0 .1em;
+  border: 1px solid #F5D039 !important;
+  padding: 0 !important;
+  color: #333;
+  font-size: 1.2em;
+  font-weight: 600;
+}

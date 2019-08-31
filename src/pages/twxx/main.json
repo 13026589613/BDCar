@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    
+  }, 
+  "navigationBarBackgroundColor": "#F5D039",
+  "navigationBarFontSize": "12px",
+  "navigationBarTitleText": "泊豆泊车",
+  "navigationBarTextStyle": "black"
+}

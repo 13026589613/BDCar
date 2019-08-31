@@ -1,0 +1,11 @@
+{
+  
+  "navigationBarBackgroundColor": "#F5D039",
+  "navigationBarFontSize": "12px",
+  "navigationBarTitleText": "绑定车辆信息",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "van-action-sheet": "/static/vant-weapp/action-sheet/index",
+    "van-button": "/static/vant-weapp/button/index"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  
+  "navigationBarBackgroundColor": "#F5D039",
+  "navigationBarFontSize": "12px",
+  "navigationBarTitleText": "车位卡片",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "van-popup": "/static/vant-weapp/popup/index",
+    "van-picker": "/static/vant-weapp/picker/index"
+  }
+}

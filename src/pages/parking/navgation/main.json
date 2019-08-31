@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "map-route": "plugin://mapPlugin/mapRoute",
+    "van-action-sheet": "/static/vant-weapp/action-sheet/index"
+  },
+  
+  "navigationBarBackgroundColor": "#F5D039",
+  "navigationBarFontSize": "12px",
+  "navigationBarTitleText": "地址导航",
+  "navigationBarTextStyle": "black"
+}

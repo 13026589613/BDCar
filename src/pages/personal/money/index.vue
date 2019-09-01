@@ -116,7 +116,15 @@
       outMoney() { // 提现
         if (_this.wallet.totalPrice === 0) {
           wx.showToast({
-            title: '无可提现金额',
+            title: '无可提现的额度',
+            duration: 2500
+          })
+          return
+        }
+
+        if (_this.wallet.totalPrice < 0.4) {
+          wx.showToast({
+            title: '最低提现额度0.4元',
             duration: 2500
           })
           return
@@ -126,7 +134,7 @@
         withdraw({}).then(res => {
           _this.wallet.totalPrice = 0
           wx.showToast({
-            title: '提现余额到微信零钱',
+            title: '已提现余额到零钱',
             duration: 3000
           })
         })
@@ -204,6 +212,7 @@
 <style lang="scss" scoped>
   .money-container {
     width: 100%;
+    background: #FFF;
   }
 
   .car-place-container {

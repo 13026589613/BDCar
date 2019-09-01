@@ -136,6 +136,7 @@
   export default {
     data() {
       return {
+        canClickMapTip: false,
         showTWXX: false,
         TWXXInfo: null,
         TWXX: null,
@@ -237,6 +238,9 @@
         this.$emit('change-type', this.showType)
       },
       clickMapTip(e) {
+        if (!this.canClickMapTip) {
+          return
+        }
         this.showMapBtnStatus = true
         this.showTipMarkeStatus = false
         this.tipMarkerInfo = null
@@ -250,6 +254,11 @@
         this.showPersonalBtn = false
         this.tipMarkerInfo = this.markersList[id - 1]
         this.$emit('tip-marker', true, this.markersList[id - 1])
+
+        this.canClickMapTip = false
+        setTimeout(() => {
+          this.canClickMapTip = true
+        }, 1000)
       },
       chooseListItem(item) { // 选中停车场所位置
         let url = '../parking/main?parkingStation=' + JSON.stringify(item)

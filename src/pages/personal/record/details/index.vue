@@ -431,7 +431,10 @@
           this.$forceUpdate()
 
           if (this.orderInfo.status == '车位使用中') {
-            this.getUserTime()
+            // this.getUserTime()
+            setInterval(() => {
+              this.getUserTime()
+            }, 1000)
           }
         })
       }
@@ -462,6 +465,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    background: #FFF;
 
     .time-coantianer {
       background-color: #F5D039;

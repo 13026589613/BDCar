@@ -114,28 +114,30 @@
     },
     methods: {
       outMoney() { // 提现
+        const _this = this
         if (_this.wallet.totalPrice === 0) {
           wx.showToast({
-            title: '无可提现的额度',
-            duration: 2500
+            title: '无可提现额度',
+            duration: 4000,
+            icon: 'none',
           })
           return
         }
 
-        if (_this.wallet.totalPrice < 0.4) {
+        if (_this.wallet.totalPrice < 40) {
           wx.showToast({
-            title: '最低提现额度0.4元',
-            duration: 2500
+            title: '最低额度0.4元',
+            icon: 'none',
+            duration: 4000
           })
           return
         }
 
-        const _this = this
         withdraw({}).then(res => {
           _this.wallet.totalPrice = 0
           wx.showToast({
-            title: '已提现余额到零钱',
-            duration: 3000
+            title: '提现微信零钱',
+            duration: 4000
           })
         })
       },

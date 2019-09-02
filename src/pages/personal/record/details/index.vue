@@ -7,16 +7,16 @@
           v-if="orderInfo.orderState === '0' || orderInfo.orderState === '1' ||orderInfo.orderState === '4'|| orderInfo.orderState === '3' || orderInfo.orderState === '5'">
 
           <img src="/static/images/common/icon_success.png" style="width: 8em; height: 8em;" />
-          <p class="c-coffee font-b font-2 mar-top-5 mar-btm-5">
+          <p class="c-coffee font-b font-2">
             {{ orderInfo.status }}
           </p>
           <!-- <p v-if="orderInfo.orderState === '3'">{{ (orderInfo.totalHour || 0) + '小时' }}</p> -->
           <!-- <p v-if="orderInfo.orderState === '4'">{{ (orderInfo.totalHour || 0) + '小时' }}</p> -->
-          <p v-if="orderInfo.orderState === '0'">请在到达车位时,点击下方按钮降下车位锁使用车位</p>
+          <p v-if="orderInfo.orderState === '0'" class="mar-btm-5">请在到达车位时,点击下方按钮降下车位锁使用车位</p>
         </div>
 
         <div class="time-content" v-if="orderInfo.orderState === '2'">
-          <div class="font-3 font-b">{{ orderInfo.hasUserTime }}</div>
+          <div class="font-3 font-b">{{ orderInfo.hasUserTime || 0 }}</div>
           <div class="font-bg font-b padding-bottom mar-lft-5">小时</div>
           <div class="font-3 font-b mar-lft-2">{{ orderInfo.hasUserMin }}</div>
           <div class="font-bg font-b padding-bottom mar-lft-5">分钟</div>
@@ -61,34 +61,37 @@
       </div>
     </div>
 
-    <div class="content" v-if="orderInfo !== null">
-      <div class="sure-order-btn mar-top-5" @click="handleLockPay()"
-        v-if="orderInfo.orderState === '2' && isWallet === 0">
-        结束停车&付款
-      </div>
-      <div class="sure-order-btn" @click="handleLock()" v-if="orderInfo.orderState === '0' && isWallet === 0">
-        降下车位锁
-      </div>
-      <div class="sure-order-btn mar-top-5" v-if="orderInfo.orderState === '0' && isWallet === 0" @click="turnToNav()">
-        导航过去
-      </div>
-      <div class="sure-order-btn mar-top-5" @click="cancelOrderInfo()"
-        v-if="orderInfo.orderState === '0' && isWallet === 0">
-        取消预约
-      </div>
-      <div class="sure-order-btn mar-top-5" @click="handleLockPay()"
-        v-if="orderInfo.orderState === '3' && isWallet === 0">
-        支付本次费用
-      </div>
+    <div style="margin-bottom: 20px;">
+      <div class="content" v-if="orderInfo !== null">
+        <div class="sure-order-btn mar-top-5" @click="handleLockPay()"
+          v-if="orderInfo.orderState === '2' && isWallet === 0">
+          结束停车&付款
+        </div>
+        <div class="sure-order-btn" @click="handleLock()" v-if="orderInfo.orderState === '0' && isWallet === 0">
+          降下车位锁
+        </div>
+        <div class="sure-order-btn mar-top-5" v-if="orderInfo.orderState === '0' && isWallet === 0"
+          @click="turnToNav()">
+          导航过去
+        </div>
+        <div class="sure-order-btn mar-top-5" @click="cancelOrderInfo()"
+          v-if="orderInfo.orderState === '0' && isWallet === 0">
+          取消预约
+        </div>
+        <div class="sure-order-btn mar-top-5" @click="handleLockPay()"
+          v-if="orderInfo.orderState === '3' && isWallet === 0">
+          支付本次费用
+        </div>
 
-      <div class="sure-order-btn mar-top-5" @click="askLeave()"
-        v-if="(orderInfo.orderState === '2') && isWallet === 1 && orderInfo.pressState == '0'">
-        催他驶离
-      </div>
+        <div class="sure-order-btn mar-top-5" @click="askLeave()"
+          v-if="(orderInfo.orderState === '2') && isWallet === 1 && orderInfo.pressState == '0'">
+          催他驶离
+        </div>
 
-      <div class="sure-order-btn mar-top-5"
-        v-if="(orderInfo.orderState === '2' || orderInfo.orderState === '3') && orderInfo.pressState == '1'">
-        已通知驶离
+        <div class="sure-order-btn mar-top-5"
+          v-if="(orderInfo.orderState === '2' || orderInfo.orderState === '3') && orderInfo.pressState == '1'">
+          已通知驶离
+        </div>
       </div>
     </div>
 
@@ -431,10 +434,10 @@
           this.$forceUpdate()
 
           if (this.orderInfo.status == '车位使用中') {
-            // this.getUserTime()
+            this.getUserTime()
             setInterval(() => {
               this.getUserTime()
-            }, 1000)
+            }, 1000 * 60)
           }
         })
       }

@@ -219,7 +219,8 @@
               key: 'openId',
               success(res) {
                 userLogin(Object.assign(e.mp.detail.userInfo, { // 传递后台参数保存
-                  openId: res.data.openId
+                  openId: res.data.openId,
+                  nickname: e.mp.detail.userInfo.nickName
                 }))
               }
             })

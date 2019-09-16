@@ -37,7 +37,7 @@
           <img src="/static/images/common/icon_parking_big.png" />
         </div>
         <div class="record-details-content">
-          <p class="record-details-title font-b font-lg">
+          <p class="font-2 record-details-title font-b" style="font-size: 2em;">
             {{ orderInfo.parkName }} {{ orderInfo.parkNum }}
           </p>
           <!-- <p class="record-details-title">车位编号：{{ orderInfo.parkNum }}</p> -->
@@ -47,13 +47,13 @@
           <p class="record-details-title">车位收费标准：{{ orderInfo.price / 100 }} 元/小时</p>
           <p class="record-details-title">超时收费标准：30 元/小时</p>
 
-          <p class="record-details-title mar-top">
+          <p class="record-details-title">
             当前费用：
             <span class="font-lg font-b">{{ orderInfo.totalPrice / 100 }}</span>
             元
           </p>
 
-          <p class="record-details-title mar-top">
+          <p class="record-details-title">
             当前状态：
             <span class="font-lg font-b">{{ orderInfo.status }}</span>
           </p>

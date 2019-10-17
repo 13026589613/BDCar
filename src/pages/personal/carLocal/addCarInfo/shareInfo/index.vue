@@ -272,6 +272,11 @@
         }
 
         const shareSchemeId = this.isUpdate ? this.schemesInfo.id : ''
+
+        const resultItemList = [...this.result]
+        resultItemList.map((item) => {
+          item = item + 1
+        })
         operateSechmeInfo({
           shareSchemeId: shareSchemeId,
           isUpdate: this.isUpdate,
@@ -283,7 +288,7 @@
           lockId: this.lockId, // 车位ID
           userLockId: this.lockId,
           price: Number(this.price) * 100,
-          weekDays: this.result.join(',')
+          weekDays: resultItemList.join(',')
         }).then(res => {
           // console.log(res);
           if (res.code === 0) {

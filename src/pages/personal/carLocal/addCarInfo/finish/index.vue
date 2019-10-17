@@ -6,7 +6,7 @@
 
     <div class="pad-all">
       <p class="font-b font-2">设置完成</p>
-      <p>泊豆泊车，让停车更轻松。</p>
+      <p>泊豆泊车，让泊车更轻松。</p>
     </div>
 
     <div class="operate-btn mar-top" @click="turnPage('../../carInfo/main')">
@@ -16,29 +16,31 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      
-    }
-  },
-  methods: {
-    turnPage(url) { // 跳转界面
-      // wx.redirectTo({ url })
-      let pages = getCurrentPages()
-      let prevPage = pages[ pages.length - 4]
-      prevPage.setData({ 
-        turnPage: true
-      })
-      console.log(prevPage);
-      wx.navigateBack({ delta: 3 })
+  export default {
+    data() {
+      return {
+
+      }
+    },
+    methods: {
+      turnPage(url) { // 跳转界面
+        // wx.redirectTo({ url })
+        let pages = getCurrentPages()
+        let prevPage = pages[pages.length - 4]
+        prevPage.setData({
+          turnPage: true
+        })
+        console.log(prevPage);
+        wx.navigateBack({
+          delta: 3
+        })
+      }
     }
   }
-}
-</script> 
+
+</script>
 
 <style lang="scss" scoped>
-@import '../local.scss';
+  @import '../local.scss';
+
 </style>
-
-

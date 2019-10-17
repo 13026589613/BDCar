@@ -187,7 +187,7 @@
           scale: 15
         })
       },
-      initParkingList() { // 初始化停车场列表信息s
+      initParkingList() { // 初始化泊车场列表信息s
         this.latitude = this.location.latitude
         this.longitude = this.location.longitude
         this.circles[0].latitude = this.location.latitude
@@ -260,7 +260,7 @@
           this.canClickMapTip = true
         }, 1000)
       },
-      chooseListItem(item) { // 选中停车场所位置
+      chooseListItem(item) { // 选中泊车场所位置
         let url = '../parking/main?parkingStation=' + JSON.stringify(item)
         wx.navigateTo({
           url
@@ -284,7 +284,7 @@
           }
         })
       },
-      tapDetails(item) { // 选中停车场所位置
+      tapDetails(item) { // 选中泊车场所位置
         const _this = this
         setTimeout(() => {
           _this.showPersonalBtn = true

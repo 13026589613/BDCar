@@ -21,7 +21,7 @@
           <div>
             <p class="font-lg">预约时间：{{ orderInfo.createTime }}</p>
             <p class="font-lg mar-top-5">最晚入场：{{ orderInfo.dueTime }}</p>
-            <p class="font-lg mar-top-5">最晚离开：{{ orderInfo.deadTime }}</p>
+            <!-- <p class="font-lg mar-top-5">最晚离开：{{ orderInfo.deadTime }}</p> -->
             <p class="font-lg mar-top">预约车牌号: {{ orderInfo.carNum }}</p>
           </div>
         </div>

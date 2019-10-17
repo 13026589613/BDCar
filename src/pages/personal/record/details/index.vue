@@ -43,9 +43,10 @@
           <!-- <p class="record-details-title">车位编号：{{ orderInfo.parkNum }}</p> -->
           <p class="record-details-title">预约时间：{{ orderInfo.createTime }}</p>
           <p class="record-details-title">最晚入场时间：{{ orderInfo.dueTime }}</p>
-          <p class="record-details-title">最晚驾离时间：{{ orderInfo.deadTime }}</p>
+          <!-- <p class="record-details-title">车辆驶离时间：{{ orderInfo.deadTime }}</p> -->
+          <p class="record-details-title" v-if=" orderInfo.orderState === '4'">车辆驶离时间：{{ orderInfo.outParkTime }}</p>
           <p class="record-details-title">车位收费标准：{{ orderInfo.price / 100 }} 元/小时</p>
-          <p class="record-details-title">超时收费标准：30 元/小时</p>
+          <!-- <p class="record-details-title">超时收费标准：30 元/小时</p> -->
 
           <p class="record-details-title">
             当前费用：
@@ -65,7 +66,7 @@
       <div class="content" v-if="orderInfo !== null">
         <div class="sure-order-btn mar-top-5" @click="handleLockPay()"
           v-if="orderInfo.orderState === '2' && isWallet === 0">
-          结束停车&付款
+          结束泊车&付款
         </div>
         <div class="sure-order-btn" @click="handleLock()" v-if="orderInfo.orderState === '0' && isWallet === 0">
           降下车位锁

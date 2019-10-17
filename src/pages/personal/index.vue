@@ -25,7 +25,7 @@
       <div class="icon-group">
         <div class="icon" @click="turnPage('../personal/record/main')">
           <div class="icon__number">{{ censusData.totalUseHour || 0 }}小时</div>
-          <div class="icon__title">泊豆停车时长</div>
+          <div class="icon__title">泊豆泊车时长</div>
         </div>
         <div class="icon" @click="turnPage('../personal/money/main')">
           <div class="icon__number">{{ (censusData.totalIncome || 0) / 100 }}元</div>

@@ -15,7 +15,7 @@
       </div>
     </div>
 
-    <!-- 停车统计分析数据 -->
+    <!-- 泊车统计分析数据 -->
     <van-cell-group>
       <div class="icon-group">
         <div class="icon">
@@ -24,7 +24,7 @@
         </div>
         <div class="icon">
           <div class="icon__number">{{ wallet.totalNum }}次</div>
-          <div class="icon__title">泊豆停车次数</div>
+          <div class="icon__title">泊豆泊车次数</div>
         </div>
       </div>
     </van-cell-group>
@@ -57,9 +57,10 @@
         <div style="margin-top: 10px; padding: 0 1em;"
           @click="turnPage('../record/details/main?isWallet=true&orderId=' + item.id)">
           <span class="fl c-black">
-            {{ item.deadTime }}
+            <span v-if="orderState === '4'">驶离时间：{{ item.outParkTime }}</span>
+            <!-- <span v-if="orderState !== '4'">{{ item.deadTime }} 前驶离</span> -->
             <span class="mar-lft-5 c-gray" v-if="item.orderState === '3' || item.orderState === '4'">
-              使用 {{ item.totalHour }} 小时
+              车位使用 {{ item.totalHour }} 小时
             </span>
           </span>
           <span class="fr c-org font-b" v-if="item.orderState === '3' || item.orderState === '4'">

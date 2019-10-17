@@ -50,7 +50,12 @@ axios.defaults.adapter = function(config) {
               if (res.data.code !== 0) {
                 if (res.data.code === 4) {
                   wx.showToast({
-                    title: "提现失败",
+                    title: res.data.msg || "操作异常，请确认后重试",
+                    icon: "none"
+                  });
+                } else if (res.data.code === 5) {
+                  wx.showToast({
+                    title: res.data.msg || "操作异常，请确认后重试",
                     icon: "none"
                   });
                 } else {
